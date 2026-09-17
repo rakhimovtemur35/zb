@@ -2,177 +2,233 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>Modern Treasury</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'zbekiston Demografiyasi (2025-2026) | Shorustamov Oybek</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Chart.js Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+  <!-- Dynamic Background Particles -->
+  <div class="bg-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
 
-  <header class="header">
-    <div class="container header-inner">
-      <div class="logo">Modern Treasury</div>
-      <nav class="nav">
-        <a href="#">Platform</a>
-        <a href="#">Solutions</a>
-        <a href="#">Resources</a>
-        <a href="#">Pricing</a>
-      </nav>
-      <div class="header-buttons">
-        <a href="#" class="link">Log in</a>
-        <a href="#" class="btn btn-primary">Sign up</a>
+  <!-- Presentation Deck Core -->
+  <div class="deck-wrapper">
+    
+    <!-- Top Progress Header -->
+    <div class="deck-topbar">
+      <div class="project-badge">
+        <i class="fa-solid fa-atom pulse-icon"></i> 
+        <span>Ona Tili Taqdimoti</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="slide-counter">
+        <span id="slideCurrent">01</span>/<span id="slideTotal">08</span>
       </div>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Build products that move money</h1>
-        <p>Modern Treasury's payment operations platform enables you to build money movement and routing to your products without the heavy lifting.</p>
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-primary">Talk to a Payments Advisor</a>
-          <a href="#" class="link">Start building →</a>
+    <!-- SLIDES CONTAINER -->
+    <div class="slides-viewport">
+
+      <!-- SLIDE 1: INTRO -->
+      <section class="slide-page active" data-index="1">
+        <div class="slide-inner center-mode">
+          <div class="hero-chip"><i class="fa-solid fa-chart-pie"></i> Demografik Analitika</div>
+          <h1 class="hero-title">O'ZBEKISTON DEMOGRAFIK O'ZGARTISHLARI</h1>
+          <p class="hero-sub">2025–2026 Yillarda Aholi O'sishi, Tug'ilish Va Ajrashishlar Dinamikasi Tahlili</p>
+          
+          <div class="author-hero-card">
+            <div class="author-avatar"><i class="fa-solid fa-user-gear"></i></div>
+            <div class="author-details">
+              <span class="lbl">Loyihani Tayyorladi:</span>
+              <h3 class="author-name">Shorustamov Oybek</h3>
+              <span class="grade">8-Sinf O'quvchisi</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="https://via.placeholder.com/500x350" alt="hero image">
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container">
-      <h2>Over <span class="green">$5B</span> Reconciled Monthly</h2>
-      <p>Trusted by fast-growing companies in the economy's most important sectors.</p>
-    </div>
-  </section>
-
-  <!-- OUR PRODUCTS -->
-  <section class="products">
-    <div class="container">
-      <h2>Our Products</h2>
-      <p>Modern Treasury's payment operations platform enables you to build money movement and routing to your products without the heavy lifting.</p>
-      <a href="#" class="btn btn-primary">Learn about...</a>
-    </div>
-  </section>
-
-  <!-- USE CASES -->
-  <section class="use-cases">
-    <div class="container">
-      <h2>Use Cases</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Move money faster</h3>
-          <p>Move money faster with our payment operations platform.</p>
-          <a href="#" class="link">Learn about... →</a>
+      <!-- SLIDE 2: AHOLI SONI -->
+      <section class="slide-page" data-index="2">
+        <div class="slide-inner">
+          <h2 class="section-title"><i class="fa-solid fa-users-line"></i> Permanent Aholi Dinamikasi (2025 - 2026)</h2>
+          <div class="grid-layout grid-2">
+            <div class="glass-card">
+              <h3>Aholining Umumiy O'sish Ko'rsatkichi</h3>
+              <p>O'zbekiston aholisi barqaror sur'atda o'sib bormoqda. Statistika agentligi ma'lumotlariga ko'ra, mamlakatimiz aholisi 38,5 milliondan oshdi.</p>
+              <div class="metric-row">
+                <div class="metric-item">
+                  <span class="m-title">2025 Yil</span>
+                  <span class="m-value color-cyan">37.8 Mln</span>
+                </div>
+                <div class="metric-item">
+                  <span class="m-title">2026 Yil</span>
+                  <span class="m-value color-blue">38.5 Mln</span>
+                </div>
+              </div>
+            </div>
+            <div class="glass-card chart-holder">
+              <canvas id="populationChart"></canvas>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Reconcile payments automatically</h3>
-          <p>Reconcile your payments automatically with our platform.</p>
-          <a href="#" class="link">Learn about... →</a>
+      </section>
+
+      <!-- SLIDE 3: TUG'ILISH VA JINS NISBATI -->
+      <section class="slide-page" data-index="3">
+        <div class="slide-inner">
+          <h2 class="section-title"><i class="fa-solid fa-baby-carriage"></i> Chaqaloqlar Tug'ilishi & Jins Farqi</h2>
+          <div class="grid-layout grid-2">
+            <div class="glass-card chart-holder">
+              <canvas id="genderChart"></canvas>
+            </div>
+            <div class="glass-card">
+              <h3>O'g'il va Qiz Bolalar Statistikasi</h3>
+              <p>2025 va 2026-yillarda tug'ilgan chaqaloqlar jinsi bo'yicha proporsiya quyidagicha shakllandi:</p>
+              <div class="gender-boxes">
+                <div class="g-box boy">
+                  <i class="fa-solid fa-mars"></i>
+                  <span class="g-percent">51.7%</span>
+                  <span class="g-lbl">O'g'il bolalar (~192.9 ming)</span>
+                </div>
+                <div class="g-box girl">
+                  <i class="fa-solid fa-venus"></i>
+                  <span class="g-percent">48.3%</span>
+                  <span class="g-lbl">Qiz bolalar (~180.5 ming)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Track balances in real time</h3>
-          <p>Track your balances in real time across all accounts.</p>
-          <a href="#" class="link">Learn about... →</a>
+      </section>
+
+      <!-- SLIDE 4: NIKOH VA AJRASHISHLAR -->
+      <section class="slide-page" data-index="4">
+        <div class="slide-inner">
+          <h2 class="section-title"><i class="fa-solid fa-heart-circle-xmark"></i> Nikohlar va Ajrashishlar Farqi</h2>
+          <div class="grid-layout grid-2">
+            <div class="glass-card">
+              <h3>Oila va Ijtimoiy Holat Tahlili</h3>
+              <p>2025 va 2026-yillar oralig'idagi o'zgarishlarda registratsiya qilingan nikohlar va ajrashishlar statistikasi quyidagicha namoyon bo'ldi:</p>
+              <ul class="animated-list">
+                <li><i class="fa-solid fa-ring color-green"></i> <strong>2025-yil:</strong> Nikohlar nisbatan yuqori sur'atda.</li>
+                <li><i class="fa-solid fa-arrow-trend-down color-pink"></i> <strong>2026-yil:</strong> Nikohlar 92.3 mingta (3 mingga kamaygan).</li>
+                <li><i class="fa-solid fa-triangle-exclamation color-yellow"></i> <strong>Ajrashishlar:</strong> 2026-yilda 24.8 mingta (1.5 mingga ko'paygan).</li>
+              </ul>
+            </div>
+            <div class="glass-card chart-holder">
+              <canvas id="marriageDivorceChart"></canvas>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- SLIDE 5: HUDUDLAR BO'YICHA -->
+      <section class="slide-page" data-index="5">
+        <div class="slide-inner">
+          <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i> Hududiy Statistik Farqlar</h2>
+          <div class="grid-layout grid-3">
+            <div class="glass-card feature-card">
+              <div class="f-icon"><i class="fa-solid fa-city"></i></div>
+              <h3>Toshkent Shahri</h3>
+              <p>Urbanizatsiya eng yuqori. Ajrashishlar va nikohlar soni respublika bo'yicha yetakchi (12.6%).</p>
+            </div>
+            <div class="glass-card feature-card">
+              <div class="f-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+              <h3>Samarqand / Farg'ona</h3>
+              <p>Tug'ilish darajasi eng yuqori hududlar. Chaqaloqlar soni har yarim yillikda 23 mingdan oshadi.</p>
+            </div>
+            <div class="glass-card feature-card">
+              <div class="f-icon"><i class="fa-solid fa-tree"></i></div>
+              <h3>Qishloq / Shahar</h3>
+              <p>Tug'ilishning 51% qishloq joylariga, ajrashishlarning 60.1% esa shahar hududlariga to'g'ri keldi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: INTERAKTIV SVG ANIMATSIYA -->
+      <section class="slide-page" data-index="6">
+        <div class="slide-inner center-mode">
+          <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Demografik O'sish Modellari</h2>
+          
+          <div class="svg-animation-container">
+            <svg class="tech-svg" viewBox="0 0 500 200">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path class="animated-path" d="M 20 150 Q 120 50, 250 100 T 480 30" fill="none" stroke="url(#grad1)" stroke-width="6" />
+              <circle class="pulse-node" cx="250" cy="100" r="10" fill="#06b6d4" />
+              <circle class="pulse-node" cx="480" cy="30" r="10" fill="#a855f7" />
+            </svg>
+            <p class="svg-desc">Statistik tendensiyalar va yoshlar ijtimoiy qatlamining rivojlanish modeli</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: AMALIY XULOSA -->
+      <section class="slide-page" data-index="7">
+        <div class="slide-inner center-mode">
+          <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Ona Tili Fanidan Xulosa</h2>
+          <div class="conclusion-box glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="conclusion-text">
+              Demografik o'zgarishlar va statistikalarni to'g'ri tahlil qilish, ularni ona tilimizda ravon, tushunarli va mantiqiy bayon etish vaqtni hamda jamiyat ravnaqini baholash imkonini beradi.
+            </p>
+            <div class="check-tags">
+              <span><i class="fa-solid fa-check"></i> Aniq Statistik Faktlar</span>
+              <span><i class="fa-solid fa-check"></i> Tahliliy Nutq</span>
+              <span><i class="fa-solid fa-check"></i> Zamonaviy Yondashuv</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: FINAL / CREDITS -->
+      <section class="slide-page" data-index="8">
+        <div class="slide-inner center-mode">
+          <div class="final-card glass-card">
+            <div class="tech-ring">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <span class="f-sub">E'tiboringiz Uchun Tashakkur!</span>
+            <h1 class="f-author">Shorustamov Oybek</h1>
+            <p class="f-desc">8-Sinf Ona Tili Fani Amaliy Slayd-Taqdimoti</p>
+            <div class="f-year">2025–2026 Yillar Statistikasi</div>
+
+            <button class="restart-btn" id="btnRestart">
+              <i class="fa-solid fa-rotate-right"></i> Boshiga Qaytish
+            </button>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
 
-  <!-- MADE FOR DEVELOPERS -->
-  <section class="developers">
-    <div class="container dev-inner">
-      <div class="dev-text">
-        <h2>Made for developers</h2>
-        <ul>
-          <li>Onboard and verify counterparties</li>
-          <li>Onboard and verify counterparties</li>
-          <li>Onboard and verify eBook</li>
-          <li>Onboard and verify user onboarding</li>
-          <li>Onboard and verify moving operation</li>
-        </ul>
-      </div>
-      <div class="dev-image">
-        <img src="https://via.placeholder.com/500x300" alt="code example">
-      </div>
+    <!-- Bottom Navigation Bar -->
+    <div class="deck-controls">
+      <button class="ctrl-btn" id="btnPrev"><i class="fa-solid fa-arrow-left"></i> <span>Oldingi</span></button>
+      
+      <div class="dot-indicators" id="dotBox"></div>
+
+      <button class="ctrl-btn primary" id="btnNext"><span>Keyingi</span> <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-  </section>
 
-  <!-- BANK ACCOUNTS -->
-  <section class="banks">
-    <div class="container bank-inner">
-      <div class="bank-text">
-        <h2>All your bank accounts in one place</h2>
-        <p>All your bank accounts in one place for your money movement, no matter which bank partner integrations.</p>
-        <a href="#" class="link">Learn more about our bank integrations →</a>
-      </div>
-      <div class="bank-logos">
-        <span>JPMorgan</span>
-        <span>Citi</span>
-        <span>Silicon Valley Bank</span>
-        <span>Wells Fargo</span>
-      </div>
-    </div>
-  </section>
+  </div>
 
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <h2>Try Modern Treasury and see how smooth payment operations can be.</h2>
-      <div class="cta-buttons">
-        <a href="#" class="btn btn-outline">Talk to a Payments Advisor</a>
-        <a href="#" class="btn btn-primary">Sign up</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="#">Ledgers</a>
-        <a href="#">Payments</a>
-        <a href="#">Connect</a>
-        <a href="#">Documents</a>
-      </div>
-      <div class="footer-col">
-        <h4>Solutions</h4>
-        <a href="#">Fintechs</a>
-        <a href="#">Enterprises</a>
-        <a href="#">Banks</a>
-      </div>
-      <div class="footer-col">
-        <h4>Platform</h4>
-        <a href="#">Platform</a>
-        <a href="#">Resources</a>
-        <a href="#">Pricing</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="#">Payhub guide</a>
-        <a href="#">Guides</a>
-        <a href="#">Blog</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Popular integrations</h4>
-        <a href="#">Stripe</a>
-        <a href="#">Plaid</a>
-        <a href="#">QuickBooks</a>
-      </div>
-    </div>
-    <p class="copyright">© 2024 Modern Treasury. All rights reserved.</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
