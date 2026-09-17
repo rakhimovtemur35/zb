@@ -1,326 +1,178 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Yangi O'zbekiston — taqdimot</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Modern Treasury</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="bg-fx">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-  <div class="blob b3"></div>
-  <div class="grid"></div>
-</div>
 
-<div class="progressbar" id="progress" style="width:10%"></div>
-<div class="counter glass" id="counter">01 / 10</div>
-<div class="tapzone left" id="tapLeft" aria-hidden="true"></div>
-<div class="tapzone right" id="tapRight" aria-hidden="true"></div>
-
-<div class="stage">
-
-  <!-- 1 : HERO -->
-  <section class="slide active" id="s1">
-    <div class="eyebrow-tag glass hero-badge"><span class="dot"></span>Kelajak soati — loyiha-taqdimoti</div>
-    <h1 class="hero-title">Yangi O'zbekiston<span class="accent">bizning yutuqlarimiz, bizning kelajagimiz</span></h1>
-    <p class="hero-sub">Mustaqillik yillarida ta'lim, iqtisodiyot, madaniyat, raqamli texnologiya va ekologiya sohalarida erishilgan yutuqlarni har bir guruh o'z tadqiqoti asosida namoyish etadi.</p>
-    <div class="chips">
-      <div class="chip glass"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>45 daqiqalik loyiha</div>
-      <div class="chip glass"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>5 guruh, 5 yo'nalish</div>
-      <div class="chip glass"><svg class="icon" viewBox="0 0 24 24"><path d="M4 21V4a1 1 0 0 1 1-1h9l5 5v13"/><path d="M14 3v5h5"/></svg>1991-yil, 1-sentabr</div>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Modern Treasury</div>
+      <nav class="nav">
+        <a href="#">Platform</a>
+        <a href="#">Solutions</a>
+        <a href="#">Resources</a>
+        <a href="#">Pricing</a>
+      </nav>
+      <div class="header-buttons">
+        <a href="#" class="link">Log in</a>
+        <a href="#" class="btn btn-primary">Sign up</a>
+      </div>
     </div>
-    <svg class="orbit" viewBox="0 0 400 400" style="position:absolute;">
-      <circle cx="200" cy="200" r="150" fill="none" stroke="var(--panel-border)" stroke-width="1"/>
-      <circle cx="200" cy="200" r="110" fill="none" stroke="var(--panel-border)" stroke-width="1"/>
-      <g style="transform-origin:200px 200px; animation:spinSlow 26s linear infinite;">
-        <circle cx="350" cy="200" r="7" fill="var(--teal)"/>
-      </g>
-      <g style="transform-origin:200px 200px; animation:spinSlow 18s linear infinite reverse;">
-        <circle cx="200" cy="90" r="5" fill="var(--gold)"/>
-      </g>
-    </svg>
-  </section>
+  </header>
 
-  <!-- 2 : MUSTAQILLIK -->
-  <section class="slide" id="s2">
-    <div class="sec-head">
-      <h2>Mustaqillikdan — Yangi O'zbekistongacha</h2>
-      <span class="sub">bir necha o'n yillik yo'l, yangicha taraqqiyot bosqichi</span>
-    </div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">1991-yil 1-sentabrda O'zbekiston Respublikasi mustaqilligini e'lon qildi. Shundan buyon mamlakatimizda ta'lim, iqtisodiyot, madaniyat, raqamli texnologiyalar va ekologiya sohalarida ko'plab islohotlar amalga oshirilmoqda. "Yangi O'zbekiston" — bu har bir oila, har bir mahalla hayotida sezilayotgan o'zgarishlar majmuidir.</p>
-        <div class="task-callout glass">
-          <div class="task-badge" style="background:var(--teal);">i</div>
-          <div class="task-body"><b>Loyihadan maqsad</b><span>Har bir guruh o'z oilasi va mahallasidan to'plagan real ma'lumotlar asosida ushbu o'zgarishlarni sinfga taqdim etadi.</span></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Build products that move money</h1>
+        <p>Modern Treasury's payment operations platform enables you to build money movement and routing to your products without the heavy lifting.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Talk to a Payments Advisor</a>
+          <a href="#" class="link">Start building →</a>
         </div>
       </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <line x1="20" y1="150" x2="280" y2="150" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-            <circle cx="20" cy="150" r="4" fill="var(--ink-soft)"/>
-            <circle cx="150" cy="150" r="4" fill="var(--gold)"/>
-            <circle cx="280" cy="150" r="4" fill="var(--teal)"/>
-            <text x="12" y="168" fill="var(--ink-soft)" font-size="10" font-family="Manrope">1991</text>
-            <text x="255" y="168" fill="var(--teal)" font-size="10" font-family="Manrope">bugun</text>
-            <path d="M20,120 Q80,60 150,90 T280,40" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="400" style="animation:dashMove 4s ease-in-out infinite;"/>
-            <circle cx="280" cy="40" r="6" fill="var(--gold)" style="animation:pulseOp 1.6s ease-in-out infinite;"/>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/500x350" alt="hero image">
       </div>
     </div>
   </section>
 
-  <!-- 3 : MAQSAD -->
-  <section class="slide" id="s3">
-    <div class="sec-head">
-      <h2>Loyihaning maqsadi</h2>
-      <span class="sub">nima uchun bu ishni qilyapmiz</span>
-    </div>
-    <div class="topic-grid" style="grid-template-columns:repeat(3,1fr);">
-      <div class="glass" style="padding:22px;"><div class="task-badge" style="background:var(--teal); margin-bottom:14px;">1</div><h3 style="font-size:16.5px; margin-bottom:8px;">Ta'limiy</h3><p class="topic-desc" style="font-size:14px;">Mustaqillik yillaridagi yutuqlarni sohalar bo'yicha tizimlashtirish.</p></div>
-      <div class="glass" style="padding:22px;"><div class="task-badge" style="background:var(--gold); margin-bottom:14px;">2</div><h3 style="font-size:16.5px; margin-bottom:8px;">Tarbiyaviy</h3><p class="topic-desc" style="font-size:14px;">Jamoada ishlash, umumiy natija uchun mas'uliyatni his qilish.</p></div>
-      <div class="glass" style="padding:22px;"><div class="task-badge" style="background:var(--leaf); margin-bottom:14px;">3</div><h3 style="font-size:16.5px; margin-bottom:8px;">Rivojlantiruvchi</h3><p class="topic-desc" style="font-size:14px;">Ma'lumotni tanlash, tizimlashtirish va taqdim etish ko'nikmasi.</p></div>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <h2>Over <span class="green">$5B</span> Reconciled Monthly</h2>
+      <p>Trusted by fast-growing companies in the economy's most important sectors.</p>
     </div>
   </section>
 
-  <!-- 4 : TA'LIM -->
-  <section class="slide" id="s4">
-    <div class="sec-head"><h2>Ta'lim sohasidagi yangiliklar</h2><span class="sub">a-guruh yo'nalishi</span></div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">Zamonaviy maktablar, IT-park va texnoparklar, o'qituvchilarni qo'llab-quvvatlash dasturlari — bilim olish imkoniyatlari yildan-yilga kengaymoqda.</p>
-        <div class="task-callout glass"><div class="task-badge" style="background:var(--teal);">a</div><div class="task-body"><b>Guruh vazifasi</b><span>Oilangiz va mahallangizdagi ta'lim sohasidagi real o'zgarishlarni to'plab, taqdim eting.</span></div></div>
-        <ul class="prompts">
-          <li>Mahallangizda yangi maktab yoki bog'cha qurilganmi?</li>
-          <li>Sinflar interaktiv doska, kompyuter bilan jihozlanganmi?</li>
-          <li>Oilangizda kim qaysi kasbni orzu qiladi?</li>
+  <!-- OUR PRODUCTS -->
+  <section class="products">
+    <div class="container">
+      <h2>Our Products</h2>
+      <p>Modern Treasury's payment operations platform enables you to build money movement and routing to your products without the heavy lifting.</p>
+      <a href="#" class="btn btn-primary">Learn about...</a>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="use-cases">
+    <div class="container">
+      <h2>Use Cases</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Move money faster</h3>
+          <p>Move money faster with our payment operations platform.</p>
+          <a href="#" class="link">Learn about... →</a>
+        </div>
+        <div class="card">
+          <h3>Reconcile payments automatically</h3>
+          <p>Reconcile your payments automatically with our platform.</p>
+          <a href="#" class="link">Learn about... →</a>
+        </div>
+        <div class="card">
+          <h3>Track balances in real time</h3>
+          <p>Track your balances in real time across all accounts.</p>
+          <a href="#" class="link">Learn about... →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MADE FOR DEVELOPERS -->
+  <section class="developers">
+    <div class="container dev-inner">
+      <div class="dev-text">
+        <h2>Made for developers</h2>
+        <ul>
+          <li>Onboard and verify counterparties</li>
+          <li>Onboard and verify counterparties</li>
+          <li>Onboard and verify eBook</li>
+          <li>Onboard and verify user onboarding</li>
+          <li>Onboard and verify moving operation</li>
         </ul>
       </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <g style="animation:floatY 3s ease-in-out infinite;">
-              <path d="M150,60 20,95 150,130 280,95 Z" fill="var(--teal)" opacity=".9"/>
-              <path d="M150,130 150,150" stroke="var(--teal)" stroke-width="3"/>
-              <circle cx="150" cy="153" r="4" fill="var(--gold)"/>
-            </g>
-            <circle cx="70" cy="50" r="3" fill="var(--gold)" style="animation:pulseOp 1.8s ease-in-out infinite;"/>
-            <circle cx="230" cy="45" r="3" fill="var(--teal)" style="animation:pulseOp 2.2s ease-in-out infinite .3s;"/>
-            <circle cx="150" cy="30" r="3" fill="var(--leaf)" style="animation:pulseOp 2s ease-in-out infinite .6s;"/>
-            <rect x="60" y="150" width="180" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
-            <rect x="60" y="150" width="120" height="3" rx="1.5" fill="var(--gold)"/>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+      <div class="dev-image">
+        <img src="https://via.placeholder.com/500x300" alt="code example">
       </div>
     </div>
   </section>
 
-  <!-- 5 : IQTISODIYOT -->
-  <section class="slide" id="s5">
-    <div class="sec-head"><h2>Iqtisodiyot va turmush darajasi</h2><span class="sub">b-guruh yo'nalishi</span></div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">Yangi ish o'rinlari, tadbirkorlik, uy-ro'zg'or sharoitlarining yaxshilanishi — oilaviy turmush darajasidagi o'zgarishlar orqali ko'rinadi.</p>
-        <div class="task-callout glass"><div class="task-badge" style="background:var(--gold);">b</div><div class="task-body"><b>Guruh vazifasi</b><span>Oilangizdagi ish, kasb va turmush sharoitidagi o'zgarishlarni tadqiq qiling.</span></div></div>
-        <ul class="prompts">
-          <li>Oilangizda yangi ish o'rni yoki tadbirkorlik paydo bo'ldimi?</li>
-          <li>Mahallangizda qanday yangi do'kon yoki korxona ochildi?</li>
-          <li>Uy-ro'zg'or sharoitlari qanday o'zgardi?</li>
-        </ul>
+  <!-- BANK ACCOUNTS -->
+  <section class="banks">
+    <div class="container bank-inner">
+      <div class="bank-text">
+        <h2>All your bank accounts in one place</h2>
+        <p>All your bank accounts in one place for your money movement, no matter which bank partner integrations.</p>
+        <a href="#" class="link">Learn more about our bank integrations →</a>
       </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <g>
-              <rect x="40" y="0" width="28" height="130" transform="translate(0,20)" fill="var(--teal)" style="transform-origin:54px 150px; animation:growBar 2.4s ease-in-out infinite;"/>
-              <rect x="100" y="0" width="28" height="130" transform="translate(0,20)" fill="var(--gold)" style="transform-origin:114px 150px; animation:growBar 2.4s ease-in-out infinite .2s;"/>
-              <rect x="160" y="0" width="28" height="130" transform="translate(0,20)" fill="var(--leaf)" style="transform-origin:174px 150px; animation:growBar 2.4s ease-in-out infinite .4s;"/>
-              <rect x="220" y="0" width="28" height="130" transform="translate(0,20)" fill="var(--teal)" style="transform-origin:234px 150px; animation:growBar 2.4s ease-in-out infinite .6s;"/>
-            </g>
-            <line x1="30" y1="150" x2="270" y2="150" stroke="rgba(255,255,255,.15)"/>
-            <circle cx="54" cy="30" r="6" fill="var(--gold)" opacity="0" style="animation:riseFade 2.6s ease-out infinite;"/>
-            <circle cx="174" cy="30" r="6" fill="var(--gold)" opacity="0" style="animation:riseFade 2.6s ease-out infinite 1s;"/>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+      <div class="bank-logos">
+        <span>JPMorgan</span>
+        <span>Citi</span>
+        <span>Silicon Valley Bank</span>
+        <span>Wells Fargo</span>
       </div>
     </div>
   </section>
 
-  <!-- 6 : MADANIYAT -->
-  <section class="slide" id="s6">
-    <div class="sec-head"><h2>Madaniyat va milliy qadriyatlar</h2><span class="sub">c-guruh yo'nalishi</span></div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">Milliy bayramlar, urf-odatlar va ajdodlardan qolgan qadriyatlar har bir oilada avloddan-avlodga o'tib kelmoqda.</p>
-        <div class="task-callout glass"><div class="task-badge" style="background:var(--brick);">c</div><div class="task-body"><b>Guruh vazifasi</b><span>Oilangizga xos milliy qadriyat va an'analarni misollar bilan taqdim eting.</span></div></div>
-        <ul class="prompts">
-          <li>Oilangizda qanday milliy bayramlar nishonlanadi?</li>
-          <li>Ota-bobolaringizdan qolgan qaysi qadriyatlarni davom ettirasiz?</li>
-          <li>Mahallangizda qanday madaniy tadbirlar o'tkaziladi?</li>
-        </ul>
-      </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <g style="transform-origin:150px 85px; animation:spinSlow 16s linear infinite;">
-              <rect x="110" y="45" width="80" height="80" fill="none" stroke="var(--teal)" stroke-width="3" transform="rotate(45 150 85)"/>
-              <rect x="110" y="45" width="80" height="80" fill="none" stroke="var(--gold)" stroke-width="3"/>
-            </g>
-            <circle cx="150" cy="85" r="10" fill="var(--gold)" style="animation:pulseOp 2s ease-in-out infinite;"/>
-            <g style="transform-origin:150px 85px; animation:spinSlow 10s linear infinite reverse;">
-              <circle cx="150" cy="20" r="4" fill="var(--teal)"/>
-            </g>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Try Modern Treasury and see how smooth payment operations can be.</h2>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-outline">Talk to a Payments Advisor</a>
+        <a href="#" class="btn btn-primary">Sign up</a>
       </div>
     </div>
   </section>
 
-  <!-- 7 : RAQAMLI TEXNOLOGIYALAR -->
-  <section class="slide" id="s7">
-    <div class="sec-head"><h2>Raqamli texnologiyalar</h2><span class="sub">d-guruh yo'nalishi</span></div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">Internet, mobil ilovalar va onlayn davlat xizmatlari kundalik hayotning ajralmas qismiga aylanmoqda.</p>
-        <div class="task-callout glass"><div class="task-badge" style="background:var(--violet);">d</div><div class="task-body"><b>Guruh vazifasi</b><span>Oilangizda raqamli texnologiyalardan qanday foydalanilishini tadqiq qiling.</span></div></div>
-        <ul class="prompts">
-          <li>Oilangizda internet va smartfondan qanday foydalanasiz?</li>
-          <li>Davlat xizmatlaridan onlayn foydalanganmisiz?</li>
-          <li>Kelajakda qaysi IT-kasbni tanlashni xohlaysiz?</li>
-        </ul>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="#">Ledgers</a>
+        <a href="#">Payments</a>
+        <a href="#">Connect</a>
+        <a href="#">Documents</a>
       </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <g stroke="rgba(255,255,255,.18)" stroke-width="1.5">
-              <path d="M20,40 L100,40 L100,90 L180,90 L180,30 L260,30" fill="none"/>
-              <path d="M20,130 L80,130 L80,70 L160,70 L160,140 L260,140" fill="none"/>
-            </g>
-            <g fill="var(--teal)">
-              <circle cx="20" cy="40" r="4"/><circle cx="100" cy="40" r="4"/><circle cx="180" cy="90" r="4"/><circle cx="260" cy="30" r="4"/>
-              <circle cx="20" cy="130" r="4" fill="var(--gold)"/><circle cx="160" cy="70" r="4" fill="var(--gold)"/><circle cx="260" cy="140" r="4" fill="var(--gold)"/>
-            </g>
-            <circle r="5" fill="var(--teal)" style="offset-path: path('M20,40 L100,40 L100,90 L180,90 L180,30 L260,30'); animation:moveDot 3.4s linear infinite;"/>
-            <circle r="5" fill="var(--gold)" style="offset-path: path('M20,130 L80,130 L80,70 L160,70 L160,140 L260,140'); animation:moveDot 4.2s linear infinite;"/>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#">Fintechs</a>
+        <a href="#">Enterprises</a>
+        <a href="#">Banks</a>
       </div>
-    </div>
-  </section>
-
-  <!-- 8 : EKOLOGIYA -->
-  <section class="slide" id="s8">
-    <div class="sec-head"><h2>Ekologiya va obodonlashtirish</h2><span class="sub">e-guruh yo'nalishi</span></div>
-    <div class="topic-grid">
-      <div>
-        <p class="topic-desc">Yashil hududlarni ko'paytirish, chiqindilarni saralash va mahallani obodonlashtirish — kichik odatlardan boshlanadigan katta o'zgarishlar.</p>
-        <div class="task-callout glass"><div class="task-badge" style="background:var(--leaf);">e</div><div class="task-body"><b>Guruh vazifasi</b><span>Mahallangizdagi ekologik o'zgarishlar va oilangizning hissasini yoriting.</span></div></div>
-        <ul class="prompts">
-          <li>Mahallangizda qancha yangi daraxt ekilgan?</li>
-          <li>Chiqindilarni saralash oilangizda odat bo'lganmi?</li>
-          <li>Hovlingizda qanday yashil hudud bor?</li>
-        </ul>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#">Platform</a>
+        <a href="#">Resources</a>
+        <a href="#">Pricing</a>
       </div>
-      <div class="video-frame glass">
-        <div class="chrome"><span></span><span></span><span></span><div class="rec"><i></i>LIVE</div></div>
-        <div class="scene">
-          <svg viewBox="0 0 300 170">
-            <g style="transform-origin:230px 40px; animation:spinSlow 24s linear infinite;">
-              <line x1="230" y1="10" x2="230" y2="0" stroke="var(--gold)" stroke-width="2"/>
-              <line x1="255" y1="18" x2="262" y2="11" stroke="var(--gold)" stroke-width="2"/>
-              <line x1="205" y1="18" x2="198" y2="11" stroke="var(--gold)" stroke-width="2"/>
-            </g>
-            <circle cx="230" cy="40" r="14" fill="var(--gold)" opacity=".85"/>
-            <rect x="145" y="110" width="10" height="45" fill="#6b4a33"/>
-            <g style="transform-origin:150px 110px; animation:popIn 2.2s ease-out infinite;">
-              <circle cx="150" cy="95" r="26" fill="var(--leaf)"/>
-            </g>
-            <g style="transform-origin:120px 130px; animation:popIn 2.2s ease-out infinite .3s;">
-              <circle cx="118" cy="118" r="18" fill="var(--leaf)" opacity=".85"/>
-            </g>
-            <g style="transform-origin:182px 130px; animation:popIn 2.2s ease-out infinite .6s;">
-              <circle cx="184" cy="118" r="18" fill="var(--leaf)" opacity=".85"/>
-            </g>
-            <line x1="20" y1="155" x2="280" y2="155" stroke="rgba(255,255,255,.15)"/>
-          </svg>
-        </div>
-        <div class="scrub"><i></i></div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Payhub guide</a>
+        <a href="#">Guides</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Popular integrations</h4>
+        <a href="#">Stripe</a>
+        <a href="#">Plaid</a>
+        <a href="#">QuickBooks</a>
       </div>
     </div>
-  </section>
-
-  <!-- 9 : MILLATIMIZ FIDOYILARI -->
-  <section class="slide" id="s9">
-    <div class="eyebrow-tag glass" style="margin-bottom:18px;"><span class="dot"></span>Millatimiz fidoyilari — 5 daqiqa</div>
-    <div class="fidoyi-wrap">
-      <div class="avatar">QR</div>
-      <div class="fidoyi-text">
-        <h3>Qayum Ramazon</h3>
-        <span class="years">1900 – 1938</span>
-        <p>Toshkentning "Kallaxona" mahallasida savdogar oilasida tug'ilgan. Boshlang'ich ta'limni jadid maktabida, so'ngra Munavvarqori Abdurashidxonovning "Namuna" maktabida olgan. Ilmini oshirish uchun Istanbulga yo'l olgan, biroq chegaradan o'ta olmay, Bokudagi pedagogika bilim yurtida til-adabiyot yo'nalishini tugatib, 1917-yilda Toshkentga qaytgan. 1919-yilda Abdurauf Fitrat boshchiligidagi "Chig'atoy gurungi" jamiyatiga qo'shilib, Fitrat tomonidan unga "O'ktam" taxallusi berilgan. U bir vaqtning o'zida maktabda til-adabiyot ta'limi bo'yicha nazoratchi-inspektor, "Qizil bayroq" va "Turkiston" gazetalarining muxbiri, yangi o'zbek alifbosi qo'mitasi a'zosi bo'lgan, shuningdek Fitratning "Turon" teatridagi spektakllarida aktyor sifatida ham faoliyat yuritgan.</p>
-        <div class="mini-tl">
-          <div class="pt glass"><b>1900</b> tug'ilgan</div>
-          <div class="pt glass"><b>1917</b> Toshkentga qaytgan</div>
-          <div class="pt glass"><b>1919</b> "Chig'atoy gurungi"</div>
-          <div class="pt glass"><b>1938</b> vafot etgan</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10 : YAKUN -->
-  <section class="slide" id="s10">
-    <div class="sec-head"><h2>45 daqiqalik yo'l xaritasi</h2><span class="sub">mashg'ulotning umumiy tuzilishi</span></div>
-    <div class="timeline">
-      <div class="tl-bar">
-        <div class="tl-seg" style="width:11%; background:var(--teal);">5'</div>
-        <div class="tl-seg" style="width:11%; background:var(--gold);">5'</div>
-        <div class="tl-seg" style="width:78%; background:var(--panel-strong); color:var(--ink);">guruh taqdimotlari va yakun</div>
-      </div>
-      <div class="tl-labels">
-        <div class="tl-label"><span class="tl-dot" style="background:var(--teal);"></span>Tashkiliy qism</div>
-        <div class="tl-label"><span class="tl-dot" style="background:var(--gold);"></span>Millatimiz fidoyilari</div>
-        <div class="tl-label"><span class="tl-dot" style="background:var(--panel-strong);"></span>5 guruh taqdimoti</div>
-      </div>
-    </div>
-    <div class="recap-chips">
-      <div class="chip glass" style="background:rgba(43,212,201,.12);">a — Ta'lim</div>
-      <div class="chip glass" style="background:rgba(244,187,71,.12);">b — Iqtisodiyot</div>
-      <div class="chip glass" style="background:rgba(255,111,92,.12);">c — Madaniyat</div>
-      <div class="chip glass" style="background:rgba(143,134,246,.12);">d — Raqamli tex.</div>
-      <div class="chip glass" style="background:rgba(87,214,141,.12);">e — Ekologiya</div>
-    </div>
-    <div class="closing">
-      <p>Har bir guruh — Yangi O'zbekistonning bir sahifasi. Tayyor bo'ling!</p>
-      <div class="credit">"Kelajak soati" — sentabr oyi mashg'ulot ishlanmasi, 3-hafta · to'liq ekran uchun pastdagi tugmani bosing</div>
-    </div>
-  </section>
-
-</div>
-
-<div class="nav glass">
-  <button id="prevBtn" aria-label="Oldingi slayd"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-  <div class="dots" id="dots"></div>
-  <button id="nextBtn" aria-label="Keyingi slayd"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
-  <button id="fsBtn" aria-label="To'liq ekran"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/></svg></button>
-</div>
-
-<script src="script.js"></script>
+    <p class="copyright">© 2024 Modern Treasury. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
